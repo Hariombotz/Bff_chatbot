@@ -1,1 +1,29 @@
-<PUT FULL CODE FROM ABOVE>
+{
+  "name": "BestieBot",
+  "description": "A sweet Telegram chatbot BFF powered by GPT and MongoDB",
+  "env": {
+    "BOT_TOKEN": {
+      "description": "Your Telegram bot token",
+      "required": true
+    },
+    "MONGO_URI": {
+      "description": "Your MongoDB connection URI",
+      "required": true
+    },
+    "LOG_CHANNEL_ID": {
+      "description": "Channel ID for logging events",
+      "required": true
+    },
+    "ADMIN_IDS": {
+      "description": "Comma separated admin user IDs",
+      "required": true
+    },
+    "BOT_NAME": {
+      "description": "Custom name for the bot",
+      "required": false
+    }
+  },
+  "scripts": {
+    "start": "python3 bot.py"
+  }
+}
