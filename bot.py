@@ -13,7 +13,7 @@ db = get_db()
 # --- Startup ---
 @dp.message_handler(commands=['start'])
 async def start(msg: types.Message):
-    await remember_user_data(msg.from_user)
+    remember_user_data(msg.from_user)
     log_event(f"👋 New user started: {msg.from_user.id}")
     await msg.reply(f"Hey {msg.from_user.first_name}! 💖\nI’m {BOT_NAME}, your cute lil bestie bot! 🌸\nYou can tell me your birthday with /setbirthday 🎂\nOr check in with /mood 🫶")
 
