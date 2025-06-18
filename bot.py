@@ -81,7 +81,7 @@ async def voice_reply(msg: types.Message):
 # --- Fallback ---
 @dp.message_handler()
 async def fallback(msg: types.Message):
-    await remember_user_data(msg.from_user)
+    remember_user_data(msg.from_user)
     await msg.reply("Hey bby! 💗 Use /mood or /setbirthday to try something fun!")
 
 if __name__ == '__main__':
